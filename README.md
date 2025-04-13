@@ -16,7 +16,7 @@ Access the simulator at:
 - ✅ Secure backend via RESTful API
 
 ## 📁 Project Structure
-
+```bash
 firewall-sim/
 ├── backend/                  # Node.js API
 │   ├── app.js
@@ -31,7 +31,7 @@ firewall-sim/
 │       └── style.css
 ├── static/                   # JS Libraries
 │   └── mermaid.min.js
-
+```
 ## 🚀 Local Setup
 
 1. **Clone the repo**  
