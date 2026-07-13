@@ -2,8 +2,6 @@
 
 An interactive, full-stack web app that simulates firewall rule processing using user-defined UFW/iptables-style JSON rules. Built with Node.js + Express on the backend and PHP + Vanilla JS on the frontend.
 
-**Live demo:** https://project2.aponder.dev
-
 ---
 
 ## Features
@@ -86,11 +84,11 @@ node _preview-server.js
 # Open http://localhost:9173
 ```
 
-To run the backend independently on port 3000 (production mode with a real PHP server for the frontend):
+To run the backend independently on port 3000 (requires a separate PHP-capable server for the frontend):
 
 ```bash
 cd backend && node app.js
-# Serve /frontend with any PHP-capable server (Apache, Nginx, php -S)
+# Serve /frontend with Apache, Nginx, or: php -S localhost:8080 -t frontend
 ```
 
 ---
@@ -102,7 +100,7 @@ cd backend && node app.js
 | Backend   | Node.js, Express v5, ip-cidr v4, body-parser    |
 | Frontend  | PHP, HTML5, Vanilla JS, Mermaid.js v10          |
 | Styling   | CSS custom properties, Inter, Fira Code (Google Fonts) |
-| Hosting   | Ubuntu 22.04 VPS, Nginx, PM2                   |
+| Dev server | `_preview-server.js` (Node.js, port 9173)     |
 
 ---
 
