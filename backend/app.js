@@ -15,9 +15,13 @@ app.post('/api/rules', (req, res) => {
 });
 
 app.post('/api/evaluate', (req, res) => {
-  const packet = req.body.packet;
-  const result = evaluatePacket(packet, firewallRules);
-  res.json(result);
+  try {
+    const packet = req.body.packet;
+    const result = evaluatePacket(packet, firewallRules);
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 const PORT = 3000;
